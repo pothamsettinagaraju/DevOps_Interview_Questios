@@ -156,3 +156,69 @@ Docker
   even though if you mention multiple entry points rt only the last point will be executed.
 
 23.Can you tell me some Docker commands which are used in Docker?
+  -> Docker ps
+  -> Docker ps -a
+  -> docker logs
+  -> docker xc 
+  -> docker pull
+  -> docker push
+  -> docker run
+
+24.When we have docker already why do we use Kubernetes?
+  Docker is a containerization tool by using which i would be able to containerize all the dependencies and the artifacts
+  Kubernetes is an orchestration tool by using which i would be able to better scale manage the docker containers which i have deployed
+
+25.What are the different service are available in Kubernetes?
+  there are multiple services in kubernetes:
+  1. Load balancer - I would be able to expose my service to the outside the world
+  2. Cluster IP - I would be able to create a Cluster IP which is accessible inside a cluster
+  3. Node Port - I would be able to open a particular port to the kubernetes cluster
+
+26.Node Efinity
+  by using node efinity if we want to deploy some deployments in some of the worker nodes only.
+
+27.Difference between replica set and stateful like where they are used?
+  By using a replica set: i would be able to run on replica of docker container in all of the worker nodes which i have.
+  By using the stateful set: I would be able to pursit the data across the docker life cycle or else container life cycle and by
+  using replica sets, I would be able to manage the number of replicas that needs to be running for a particular deployment
+
+28.How do you pass secrets to the deployments?
+  In order to pass the secrets to the deployments, first of all i would be creating those secrets by using "kubectl create secret"
+  if these secerts needs to be created from literals, I would be passing --literal and if these secrets needs to create from a file
+  rt I would be creating --from a file and I would be mounting these as volumes inside my deployments.
+
+29.can you tell me the difference between HPA and VPA?
+  HPA: horizontal pod autoscaler, where i would be adding mutiple no.of replicas of the same deployment to the service such that it
+  would be balacing the load and accessing it in the actual application as well.
+  VPA: Virtical Pod Autoscaler, I would be adding  more resources to the same deployment which i was running if i am using VPA rt
+  I need to have a downtime in order to add more resources to the same deployment which i was running.
+
+30.How about Cluster Autoscaller in Kubernetes, can you please explain?
+  Cluster Autoscaller when the HPA kicks and scheduling multiple pods rt in order to cater for the workload, the resources in the
+  Kubernetes cluster would be exhausted so in order to create these resources on the fly or else the worker  nodes on fly we would
+  be using a cluster autoscaller, so based on the resource usage in the worker nodes, we would be able to add more no.of worker 
+  nodes by using a cluster autoscaller.
+------------------------------------------------------------------------
+Monitoring
+
+31.What are the different tools you have used for monitoring?
+  I have used "Promithiesus stack" in order to monitor the services and i have used "ELK stack" in order to monitor the logs and gather
+  all the logs from the respective containers or else the respective services to a log aggregation such as elastic search and by
+  using "kibana" we are creating multiple dashboards and sending the alerts based on the logs which we are getting by using watchers aswell
+
+32.What are the different tools that are there in Promethus stack?
+  InSide the promithus stack I would be having prometheus, grafana, alert manager and multiple exporters like JMX exporter and node
+  exporter. I would be uusing JMX exporter in order to monitor the java services and i would be using NODE exporter in order to
+  monitor the node metrices and all and we have multiple kinds of other exporters like: Elastic Seach exporter, MangoDB exporter,
+  Kafka exporter in order to monitor the databases too. and these exporters would be running inside the host machines and exporting
+  all of the metrices over particular port and by mentioning the prometheus do and by mentioning the scrape configs inside the 
+  prometheus.yml, The prometheus would be able to scrape all of these matrices and would be able to store the data inside the
+  prometheus time series database and 
+  by using GRAFANA I would be able to create multiple dashboards, there are readily available dashboards which i would be able to
+  directly copy by copying the ID of the particular dashboards or else I would be able to create these dashboards by using promql as well
+  and based on the alert rules which i have configured i would be sending the alerts from the alert manager to different teams which
+  i have configured inside my alert manager configuration file
+
+33.How you monitor your kubernetes cluster?
+  we have deployed Qube prometheus stack by using the readily avaliable helm chats and by using this qube prometheus stack, we were
+  able to monitor certain kind of metrices that are responsible in oder to run the kubernetes cluster.
