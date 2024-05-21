@@ -105,4 +105,34 @@ Terraform
   providers by writing all the resources as a code
 
 15.What is a provider and how it's used in Terrform?
-  Providers are the plugins which would be taking to the respective backend API's 
+  Providers are the plugins which would be taking to the respective backend API's, These would be in turn in creating those respective
+  resources inside those respective provider.
+
+16.How do you import the resources that have been manually created into terraform managment?
+  For importing the resources which are created manually to terraform rt, We should be creating those respective terraform files
+  and then we would be able to import by using terraform import resource, resource ID command
+
+17.Can you explain some of the Terraform commands?
+  -> terraform init - In order to initialize the terraform
+  -> terraform plan - In order to plan what are the resources that it is going to create
+  -> terraform apply - In order to create what ever the resources that we have planned
+  -> terraform import - In order to import the resources
+  -> terraform destroy - In order to destroy the resources that have been created or in the state file
+  -> fmt - In order to format the terraform files
+  -> terraform validate - in order to validate my terraform files
+
+18.Can you Explain monolithic and microservices architecture?
+  In monolithic architecture rt the entire application is entirely designed as a tightly coupled unit, and for suppose lets' say
+  even if you want to make any modifications to a particular service rt, you should be deploying the entire application, and even 
+  if you want to scale any of these services you should be deploying, you should be scalling the entire application as it's whole
+
+  In the form of microservices rt we would be able to segregate this particular monolithic application into multiple individual
+  microservices which are responsible for handling their own application code
+  In the microservices rt we would be able to manage the scalling of the services efficiently why because we would be able to upscale
+  or downscale a single service upon the usage of that particular service, and we will be using a Docker in order to containerize
+  these mircroservices.
+------------------------------------------
+Docker
+
+19.What is a Docker file?
+  We would be having multiple instructions inside a docker file FROM is the first line which would be defining 
