@@ -1,1 +1,36 @@
+1.What is VPC and How it using in DevOps?
+  A VPC is a Virtual Private Cloud by using which we would able to isolate our resources over a public cloud environment
+  and by using this VPC I would be able to configure the CADR range for our particular VPC and i would be able to confiure
+  the no.of subnets that i need to have and i would be able to confiure these according to the suites for our organization
 
+2.What is Public Private Subnet and what are the differences between those two?
+  By using a public subnet I would be able to host the resources which would be able to directly accessible from the public
+  internet.
+  By using Private subnet I would be able to host the instances which doesn't need to be accessed by the public internet directly
+  and these would be typically the back end application server code or else the databases and the private subnet instances
+  whould be able to downloads packages from the public internet directly by using NAK Gateway
+
+3.How do you login to your private subnet instances?
+  I would be using a bastion host in order to log to these private subnet instances and this bastion host would be residing
+  inside the public subnet and we would be typically logging into the bastion host by using SSH and from the bastion host
+  I would be logging into these private subnet instances by using the private IP
+
+4.What will you do if you lose access to that private instance or lose the pem file?
+  If i lost the access to EC2 instance right becasue of the pem file, I would be unmounting that particular voulme from that
+  particular EC2 instance by stopping that instance and I would be attaching this particular voulme to anthor EC2 instance
+  and I would be logging into that particular EC2 instance which i have the access to i will go to this particular directory
+  and I would be modifying the authiorized keys and I would be modifying the .SSH authorized keys inside which i need to
+  have the access too and i would be unmounting this particular voulme from the instance and i would be attaching it to the 
+  older instance and i would be able to login by the new PEM file
+
+5.Few LINUX commands used in your career?
+  Multible commands which i would be using in day-to-day activities
+  1. netstat -lntp  ->  in order to list the listening ports
+  2. du -sh *  -> in order to check the usage
+  3. lsblk  -> in order to list all the bloked devices
+  4. ping  -> in order to test the connectivity
+  5. telnet  -> in order to check the connectivity of a particular service in anther IP address
+  6. htop top free -m  -> in order check the resouces of the EC2 instance
+  7. ps -ef  -> in order to list all running  processers and i would be using | symbal in order to such particular process aswell
+
+6. 
