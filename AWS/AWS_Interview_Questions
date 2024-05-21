@@ -135,4 +135,24 @@ Terraform
 Docker
 
 19.What is a Docker file?
-  We would be having multiple instructions inside a docker file FROM is the first line which would be defining 
+  We would be having multiple instructions inside a docker file, FROM is the first line which should be defining the base image
+  and the version of the particular docker file. and we would be having multiple build time commands like: RUN -> Which would be
+  installing the packages inside the docker container. COPY -> which sould be copying the files from the local to the docker image.
+  ADD -> which would be again copying the files or else download the files from the public repository as well as entering any tar
+  balls as well, I would be using EXPOSE: which would be exposing the port, I would be also having commands like: CMD and ENTRY POINT
+  which are runtime commands, which would be actually starting of a service.
+
+20.Can you tell me the difference between COPY and ADD?
+  COPY and ADD are Build time commands: where COPY whoud be able to just copy the files from local to the remote.
+  and ADD: would be able to download the files and as well as the tarballs as well
+
+21.Can you differantiate RUN and CMD?
+  RUN is a built time command which would be installing packages in the docker container
+  CMD is runtime command which would be actually starting of the service inside the docker container, when we execute the docker run
+
+22.How can you diffentiate difference between CMD and entry point?
+  CMD and Entry point both are docker run time commands, Which should be actually starting of the service.
+  CMD: we would be able to override the parameters which we have passed and inside the entry point we won't be override the values
+  even though if you mention multiple entry points rt only the last point will be executed.
+
+23.Can you tell me some Docker commands which are used in Docker?
