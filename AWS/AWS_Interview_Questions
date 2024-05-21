@@ -22,6 +22,8 @@
   and I would be modifying the authiorized keys and I would be modifying the .SSH authorized keys inside which i need to
   have the access too and i would be unmounting this particular voulme from the instance and i would be attaching it to the 
   older instance and i would be able to login by the new PEM file
+-------------------------------------
+Linux
 
 5.Few LINUX commands used in your career?
   Multible commands which i would be using in day-to-day activities
@@ -32,5 +34,75 @@
   5. telnet  -> in order to check the connectivity of a particular service in anther IP address
   6. htop top free -m  -> in order check the resouces of the EC2 instance
   7. ps -ef  -> in order to list all running  processers and i would be using | symbal in order to such particular process aswell
+---------------------------------
+Jenkins
 
-6. 
+6.have you worked on Jenkins, can you tell me what is Jenkins?
+  Jenkins is a CICD tool by using which i would be able to manage the entire continuous Integration and contionus deployment
+  from the creation of a Pull request to the deployment, continuously delivering our newly created images to the DEV or QA ENVTS.
+  and we would be using multiple plugins in order to achieve this like: GIT plugin, Maven plugin, Sonor plugin in order to do
+  sonor scans and we would be using kubenetes plugin
+
+7.What kind of pipelines you have written in Jenkins?
+  I have worked on multiple piples
+  1. Declarative pipelines
+  2. Scripted piplines
+  3. Hybrid pipelines which is a mixture of 1,2 pipelines
+
+8.Explain the declarative pipeline syntax used in Jenkins?
+  The declarative pipeline following a particular syntax where these pipelines would be starting of with pipeline inside
+  which i would be having a stages inside which i would be having stage and inside the stage i would be having the steps
+  I would be having multiple stage in side the stages such that i would be able to configure these and i would be able to
+  write the parallel as well in order to parallel execute multiple stages at a single time
+
+9.Explain the Master Slave Architecture?
+  By using a Master slave architecture, i would be able to reduce the load on master by configuring multiple slaves and
+  running these Jenkins jobs on those slaves attached to it, in order to connect a linux agent as a slave to the Jenkins
+  right, we need to go to the nodes add a new node I need to pass the IP of the salve which i need to attach as a slave
+  i need to add the  pem file of the particular slave i need to pass the user directory and i need to also select the type
+  of checks that Jenkins needs to be providing while connecting to this particular slave aswell and in order to if i want
+  to connect a windows agent rt I need to download the JNP jar onto the windows Jenkins and I should be running the jnlp
+  jar such that Jenkins would be connecting as slave to the Jenkins Master
+
+10.Explain the CICD pipelines
+  We would be having multiple stages to our CICD pipelines and these would be triggered via a webhooks which have configured
+  So whenever a developer creates a pull request right this would be triggering the Jenkins pipeline via webhook where would
+  be having multiple stages. 
+  -> The first stage checkout stage where we would be checking out of the latest code and then 
+  -> building the artifact in the second satge
+  -> then we would be doing the sonor scans in order to figure out vulnerabilities code smells and code bugs in the 
+     particular project
+  -> in the fourth stage building the docker file
+  -> in the fifth stage we would be using trivy scans in order to figure out any vulnerabilities inside a docker container as well
+  -> in the sixth stage we would be pushing this particular image to the container registry and from there we would be
+    upgrading our Dev or QA servers with latest image and then we would be running our QA automation test cases on top of
+    the newly released build and sending the results as a post build actions to the developers aswell as QA team and we have
+    used multiple plugins inside these pipelines in order to store the Jenkins credentials rt, we had used Jenkins credentials
+    plugin and by using credentials ID inside these stages, we were able to check out those repositories as well and the same 
+    way i have used credentials ID in order to authenticate with the docker and push all the images to the container repository
+    as well
+
+------------------------------
+Ansible
+
+11.What is Ansible and How it works?
+  Ansible is a configuration management tool by using which i would be able to manage the configuration across multiple
+  instances by using SSH communication.
+
+12.What are different modules you have used in Ansible?
+  I have used multiple module like: M module, Service Module, copy module, shell module these are the few module which i had
+  used by using ansible roles, I would be able to organize my playbooks into reusable tasks and this is useful for the code management
+  and usig these roles across multiple playbooks as well
+
+13.What are handler and how are handlers used in ansible?
+  handlers are ansible tasks which would be only triggred when triggred by a notified directive and these we would be using majorly
+  in order to restart any services, even though if we trigger the handlers by using notified dierctor multiple times, these handlers
+  would be executed only once at the end of the playbook execution
+--------------------------------------
+Terraform
+14.What is Terraform and how it's used?
+  Terraform is an infrastructure as a code tool by using which i would be able to create multiple resouces across multiple cloud
+  providers by writing all the resources as a code
+
+15.What is a provider and how it's used in Terrform?
+  Providers are the plugins which would be taking to the respective backend API's 
