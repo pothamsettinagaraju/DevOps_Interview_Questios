@@ -8,7 +8,7 @@
   internet.
   By using Private subnet I would be able to host the instances which doesn't need to be accessed by the public internet directly
   and these would be typically the back end application server code or else the databases and the private subnet instances
-  whould be able to downloads packages from the public internet directly by using NAK Gateway
+  whould be able to downloads packages from the public internet directly by using NAT Gateway(route table) or SNAT Gateway(Load balancer)
 
 3.How do you login to your private subnet instances?
   I would be using a bastion host in order to log to these private subnet instances and this bastion host would be residing
