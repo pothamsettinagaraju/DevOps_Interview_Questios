@@ -1,0 +1,40 @@
+1. What is 3 tire architecture
+2. What is ECS and Kubernetes?
+3. what is bitbucket does it has build pipeline.
+4. How do you connect Dyantrace to your code.
+5. What is Terraform statefile and How can you protect
+6. Build steps?
+7. what VPC?
+8. What is s3 and what are the storage classes of s3?
+9. What is EC2?
+10. Diff EC2 and S3?
+11. What is KMS?
+12. What is EC2 instance types?
+13. Tell me some Linux commands you worked on?
+14. Tell me some Git commands you worked on?
+15. What is Cherrypic command does?
+16. CI/CD set up?
+17. Bamboo pipeline steps?
+18. How do you integrate pipeline?
+19. What Artifactory?
+20. which cloud support to store artifacts in cloud?
+21. How do you create repo in artifactory?
+22. what is docker file?
+23. What is docker compose?
+24. What is HPA and VPA in K8s?
+25. what are the services in K8s and usage?
+26. What is container and pod?
+27. What is Ingress and Egress in k8s?
+28. which networking tools your using and how did you connect?
+29. what is Ansible?
+30. What are the ansible modules you worked on?
+31. What is ansible playbook?
+32. What is YAML?
+33. What is role and why it's important in ansible?
+34. Which communication it uses for linux servers?
+35. What is Jenkins?
+36. What is CI/CD?
+37. What are the pipelines does Jenkins have?
+38. what is Declarative pipeline in Jenkins?
+39. roles and responsibilities?
+40. day to day activities?
