@@ -24,3 +24,6 @@ Elastic load balancer-> you have to attach private subnet and target group.
 Automation you can define NACL to do same tasks mutiple times.
 
 if we want to install or access internet via Private subnet we have to follow the NAT gateway to masking IP address otherwise our instance IP address will expose to outside world.
+
+Changing IP adress by load balancer using SNAT gateway.
+Changing IP address by using routers NAT gateway
