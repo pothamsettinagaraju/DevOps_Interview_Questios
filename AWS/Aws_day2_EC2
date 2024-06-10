@@ -27,3 +27,6 @@ if we want to install or access internet via Private subnet we have to follow th
 
 Changing IP adress by load balancer using SNAT gateway.
 Changing IP address by using routers NAT gateway
+
+SG -> only for allow
+NACL -> allow + deny (can we attach to multiple instance in subnet)
