@@ -38,5 +38,7 @@ if we open 8000 port in secuirty group, if we block in NACL with 2nd rule where 
 Ans: DNS as a service
 Domain name service 
 Domain Registration
+|
+-> Hosted Zones
 route53 can do health checks aswell
 Aws provide domain names and we can itegrate from outside if we purchased.
