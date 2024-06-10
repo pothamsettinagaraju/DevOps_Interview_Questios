@@ -30,3 +30,6 @@ Changing IP address by using routers NAT gateway
 
 SG -> only for allow
 NACL -> allow + deny (can we attach to multiple instance in subnet)
+
+If we open 8000 port in security group, if we block in NACL with 1st rule it will not be access.
+if we open 8000 port in secuirty group, if we block in NACL with 2nd rule where as 1st rule allow all traffic then it will be access
