@@ -13,4 +13,14 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
 sudo apt-get update
 sudo apt-get install jenkins
 
-4. 
+VPC
+4. What is VPC, How does it works?
+Ans: VPC is a Virtual private cloud, where we would create resources over public cloud with private space.
+
+Internet gateway -> Public Subnet -> Loadbalancer -> Routers -> Security group will check request for the port and IP address is coming from.
+
+Elastic load balancer-> you have to attach private subnet and target group.
+
+Automation you can define NACL to do same tasks mutiple times.
+
+if we want to install or access internet via Private subnet we have to follow the NAT gateway to masking IP address otherwise our instance IP address will expose to outside world.
