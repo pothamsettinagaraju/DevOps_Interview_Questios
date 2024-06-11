@@ -42,3 +42,8 @@ Domain Registration
 -> Hosted Zones
 route53 can do health checks aswell
 Aws provide domain names and we can itegrate from outside if we purchased.
+
+6. VPC Prod example?
+
+copy a private instance pem file to bastion host:
+scp -i /path_of_the_pem_file_in_local /path_of_the_pem_file_in_local ubuntu@publicIPaddreessof bastionHost:/home/ubuntu
