@@ -47,3 +47,9 @@ Aws provide domain names and we can itegrate from outside if we purchased.
 
 copy a private instance pem file to bastion host:
 scp -i /path_of_the_pem_file_in_local /path_of_the_pem_file_in_local ubuntu@publicIPaddreessof bastionHost:/home/ubuntu
+
+7. What is IAM Users, groups, roles and policies?
+Ans: Identify & Access management
+IAM users - by using we would be able to authenticate and authorise the services in AWS
+IAM groups - insted of giving all users to access, we can create a group for dev team and add the respected policies' and we can attach to that user.
+IAM roles - we would like to give permission to application for accessing the any services, we can add roles to that application.
