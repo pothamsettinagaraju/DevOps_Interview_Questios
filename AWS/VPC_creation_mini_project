@@ -1,0 +1,29 @@
+1. Create VPC- as vpc more and create sg aswell and add 8000 port
+2. Create Auto Scalling from Ec2 service : create launch template, select instance type and add sg group which created in VPC creation , add 2 private subnets create
+  -> attach created template to Autoscalling and next-> attach public instance and attach 8000 as port and create
+3. Create load balancer as application loadbalancer and attach VPC and attach SG and attach tg to load balancer
+4. add http 8000 to loadbalancer and run below
+
+login to bastion host
+ssh -i pem_file uname@publicaddress
+
+before login copy the pem file to public instance
+scp -i /user/nag/aws.pem /user/nag/aws.pem ubuntu@publicIPAddress
+
+login to private instance
+make sure you login public instance and that instance have the pem file of private instance using that pem file run below cmd
+ssh -i pem ubuntu@privateIPAddress
+
+create simple project
+vim index.html
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>My First AWS Blog</h>
+</body>
+</html>
+  Save it and run below cmd in private instance
+python3 -m http.server 8000
+
+Now open loadbalancer and copy DNS name and seach in google it will hit the our application
