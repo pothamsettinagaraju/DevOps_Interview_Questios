@@ -54,3 +54,6 @@ policy:
     }
   ]
 }
+
+
+Sometime we may need to enable CORS: which will enable the multi website access to s3 buckets.
