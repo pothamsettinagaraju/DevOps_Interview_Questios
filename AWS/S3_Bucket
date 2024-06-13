@@ -49,7 +49,7 @@ policy:
         "S3:GetObject"
       ],
       "Resource": [
-          "arn:aws:s3:::NameOfTheS3Bucket/"
+          "arn:aws:s3:::NameOfTheS3Bucket/*"
       ]
     }
   ]
