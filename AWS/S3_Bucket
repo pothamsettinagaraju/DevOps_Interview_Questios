@@ -29,7 +29,7 @@ By using S3 we can achieve lot of features like:
 1. we can enable versioning
 2. we can create tag's - to identify which object is belong to which project
 3. we can create access restrictions
-4. we can enable encryption (by default aws provides encryption), if we want to do more encryption we can attach
+4. we can enable encryption (by default aws provides encryption), if we want to do more encryption we can attach; (SSE-S3 defalut one, SSE-KMS other encryption and we can use both)
 5. Event notification
 6. Object locking - if lock the object in S3 bucket no one can access or override the object
 7. Amazon EventBridge
