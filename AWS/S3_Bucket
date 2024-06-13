@@ -1,0 +1,56 @@
+S3 is Simple storgae service and global service and store it to any region
+
+it will be 99.99999999999 reliable
+
+11 9's 
+
+S3 can store any type of storage and accessible globally
+
+1. Availability & Durability - its global service, we can access across the world.
+2. Scalability - if our AZ is down even though we can access our S3 bucket because it can create multiple replica's accross the AZ
+3. Secure - AWS provides security and access control to s3 objects
+4. Cost effective - it has diffrent storage classes we can use that classes based on our usability.
+
+Storage classes types:
+We have multiple storage classes
+
+1. S3 Standard - Access time 1-15 sec, cost $0.02
+2. S3 Standard IA
+3. One Zone IA - 3-5 min, $ 0.01 
+4. S3 glacier  - Access time 12-48 hours, very less cost
+5. S3 glacier instant retrieval
+6. S3 glacier Flexible retrieval
+7. S3 glacier deep archive - Access time 12-48 hours, very less cost
+8. S3 outposts - high cost $0.03, access time varies
+9. S3 Inteligent Tiering - access time 0.015- 0.025, access time varies
+
+By using S3 we can achieve lot of features like:
+
+1. we can enable versioning
+2. we can create tag's - to identify which object is belong to which project
+3. we can create access restrictions
+4. we can enable encryption (by default aws provides encryption), if we want to do more encryption we can attach
+5. Event notification
+6. Object locking - if lock the object in S3 bucket no one can access or override the object
+7. Amazon EventBridge
+8.static web site hosting- we can access the s3 bucket object over the url
+  for this static web hosting we have to disable block public access option in permissions and also we have to attach a policy we allow the users to access
+
+policy:
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid"  : "PublicReadGetObject",
+      "Effect" : "Allow",
+      "Principal": "*",
+      "Action": [
+        "S3:GetObject"
+      ],
+      "Resource": [
+          "arn:aws:s3:::NameOfTheS3Bucket/"
+      ]
+    }
+  ]
+}
