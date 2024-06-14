@@ -1,0 +1,21 @@
+AWS CLI - Command line interface, developed using python utility
+
+AWS supports API's - application programming interface.
+
+AWS CLI
+
+Terraform
+AWS CloudFormation
+AWS CDK
+
+
+
+EX:)Enable s3 versioning using CFT:
+
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  S3Bucket:
+    type: 'AWS::S3::Bucket'
+    properties:
+      VersioningConfiguration:
+        Status: Enabled
