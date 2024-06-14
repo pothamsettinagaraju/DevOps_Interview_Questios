@@ -1,0 +1,33 @@
+1. AWS CodeCommit
+2. AWS CodeBuild
+3. AWS CodePipeline - acts as a orchastrator which invokes code build and code deploy
+4. AWS CodeDeploy
+
+1. AWS CodeCommit: only private repos
+
+Advantage:
+Managed Git  -  it contain managed git
+Scalability  - it will keep creating repositories
+Reliability  - if we have any issues we can talk to AWS
+
+Disadvantages:
+Features
+Aws restricted
+Less Integrations with services outside AWS
+
+
+2. AWS CodePipeline
+
+AWS CodeCommit  -> Aws CodePipeline  -  AWS CodeDeploy  -> EC2 or Kubernetes
+                        |
+                    AWS CodeBuild
+
+AWS END to END
+AWS CodeBuild
+goto -> code build -> create pipeline and attach source code  -> 
+
+AWS Codepipeline
+Manages entrire CI & CD process like azure-pipeline.yml file
+
+
+Note:  We have to codebuild and codedeploy then we have integrate both with codepipeline
