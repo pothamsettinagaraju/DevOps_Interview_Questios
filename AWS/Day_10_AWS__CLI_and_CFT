@@ -15,7 +15,21 @@ EX:)Enable s3 versioning using CFT:
 AWSTemplateFormatVersion: 2010-09-09
 Resources:
   S3Bucket:
-    type: 'AWS::S3::Bucket'
+    type: AWS::S3::Bucket
     properties:
       VersioningConfiguration:
         Status: Enabled
+
+
+EX: Create a CFT for EC2 instance
+
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  EC2Instance:
+    type: AWS::EC2:Instance
+    properties:
+      ImageID: String,
+      KeyName: String,
+    SecurityGroups:
+    - String
+    InstanceType: String
