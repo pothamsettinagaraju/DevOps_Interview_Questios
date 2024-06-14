@@ -38,3 +38,5 @@
 38. what is Declarative pipeline in Jenkins?
 39. roles and responsibilities?
 40. day to day activities?
+41. Custom definitions
+42. What if you deploy your application on EC2 instance you added load balancer and auto scaller, still your request is hung
