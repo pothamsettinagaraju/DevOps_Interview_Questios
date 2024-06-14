@@ -3,3 +3,12 @@
 3. AWS CodePipeline
 4. AWS CodeDeploy
 
+1. AWS CodeCommit: only private repos
+
+Advantage:
+Managed Git  -  it contain managed git
+Scalability  - it will keep creating repositories
+Reliability  - if we have any issues we can talk to AWS
+
+Disadvantages:
+
