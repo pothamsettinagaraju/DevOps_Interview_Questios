@@ -1,0 +1,7 @@
+AWS CloudWatch is a gate keper for AWS services
+it supports:
+1. Monitoring
+2. Alerting
+3. Reporting
+4. logging
+
