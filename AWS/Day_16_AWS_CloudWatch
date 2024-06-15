@@ -5,3 +5,15 @@ it supports:
 3. Reporting
 4. logging
 
+1. Monitoring
+2. Real life Metrics
+3. Alarms'
+4. log insights
+5. Custom metrics
+6. Cost optimization (Lamda)
+7. scaling
+
+Using CloudWatch alarms we can integrate SNS services.
+
+EX:
+Create CloudWatch alarm for EC2 instance for CPU utilization and create topic of add email id and create and add time and complexity. goto email and cofirm the SNS confirmation. then only in SNS topics it will show the email is confirmed otherwise email won't trigger.
