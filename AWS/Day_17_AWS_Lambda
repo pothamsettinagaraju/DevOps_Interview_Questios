@@ -1,0 +1,18 @@
+AWS Lambda: Cost optimization
+Lambda functions are Event driven, only it will trigger by event
+Serverless Architecture
+
+Advantages:
+Compute
+Serverless
+managing auto scaling
+
+Once the request is come aws will create server and once request done, it's automatically take down the server
+
+Diff Between lambda and EC2
+
+Lamda
+We no need to think where it hosted and what is the IP address and autoscaling
+
+EC2:
+We need to handle IP address, Security, auto scaling etc
