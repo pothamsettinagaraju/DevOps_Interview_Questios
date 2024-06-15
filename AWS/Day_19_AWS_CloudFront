@@ -1,0 +1,11 @@
+CLoud Front is a CDN service
+CDN is Content Delivery Network
+
+What is Content Delivery Network?
+It helps to cache the content in the nearest edge locations.
+
+By Using Cloud Front we can achieve:
+ex: if we using S3 bucket
+security
+low latency
+cost optimization and etc
