@@ -9,3 +9,6 @@ ex: if we using S3 bucket
 security
 low latency
 cost optimization and etc
+
+
+We can create this for S3, load balancer, API Gateway, Mediastore container, Mediastore package container and mediapackage v2 endpoints.
