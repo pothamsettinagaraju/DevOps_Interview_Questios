@@ -1,6 +1,6 @@
 AWS Lambda: Cost optimization
 Lambda functions are Event driven, only it will trigger by event
-Serverless Architecture
+It provide compute & Serverless Architecture
 
 Advantages:
 Compute
