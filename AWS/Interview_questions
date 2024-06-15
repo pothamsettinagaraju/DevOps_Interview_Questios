@@ -38,5 +38,8 @@
 38. what is Declarative pipeline in Jenkins?
 39. roles and responsibilities?
 40. day to day activities?
-41. Custom definitions
+Global logic company
+41. Custom Resource definitions in kubernetes?
 42. What if you deploy your application on EC2 instance you added load balancer and auto scaller, still your request is hung
+43. How do you restart container every day at 12 AM, write a syntax?
+44. How do you make connection to Mongo DB for containers.
