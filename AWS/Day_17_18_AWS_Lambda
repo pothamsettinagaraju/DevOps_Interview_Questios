@@ -21,3 +21,4 @@ Lambda functions are Event driven and it can trigger by any event like CloudWatc
 it is written in python code.
 
 We can simple say labmda is to perform some specific tasks or actions.
+We can add Cloud Watch to lambda, if we go to CloudWatch there we have Events under events we can create rules.
