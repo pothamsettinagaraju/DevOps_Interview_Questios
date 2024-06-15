@@ -16,3 +16,8 @@ We no need to think where it hosted and what is the IP address and autoscaling
 
 EC2:
 We need to handle IP address, Security, auto scaling etc
+
+Lambda functions are Event driven and it can trigger by any event like CloudWatch any other, and it will perform a specific task which we assiged to lambda function.
+it is written in python code.
+
+We can simple say labmda is to perform some specific tasks or actions.
