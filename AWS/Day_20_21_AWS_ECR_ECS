@@ -1,0 +1,74 @@
+AWS ECR is Elastic Container Registry
+ECR Is like a dockerhub to serve the docker images
+
+Using AWS CLI we can push our images
+
+What is AWS CLI(Command line Interface) is a tool, it's a command line utility that interacts with aws API's
+
+E - Elastic : Scalable, Available
+C - Container: Container
+R - Registry: like a Docker hub or quary.in
+
+ECR is to manage docker images like docker hub
+
+ECR by default is private repo
+DockerHub by default is public
+----------------------------------------
+AWS ECS - is Elastic Container Service
+ECS and Docker Swarm or Mesos
+ECS Advantages: It has lot advantages
+Simple Architecture
+It's a Orchestrate platform
+It supports Server(EC2) and Serverless model(Forgate)
+If we use ECS+Forgate we no need to manage server it's managed by AWS and it's simple in nature
+
+
+K8s Supports - CRD(Custom resource Definitions) using CRD we can extend our capabilities 
+
+ECS Disadvantages:
+CRD's
+Ingress Controller
+Argo CD
+Flux etc
+
+K8s having lot of advantages where as ECS does not support
+
+IF someone want to replace ECS with other cloud container like AKS, it hard to migrate becasue each and everything they have to set up
+
+EKS: Elastic Kubernetues Services
+K8s is complicated architecture
+
+Using ECS, we can simple create task and task definition and we can create service and directly we can use that service
+Using Eks, we have to manage master node's and worker node's, In master node we have to take care, API Server,Scheduler, ETCD, Controller, Cloud Controller and Worker node we have to take care Kubeproxy, Kubelet, runtime
+
+
+
+-----------------------------------------------------------
+EKS - Elastc Kubernetes Service
+
+How to use EKS in CLI:
+Below are prerequisite:
+1. We need to install kubectl: - using kubectl we can interact with EKS in AWS
+2. Ekctl
+3. AWS Cli
+
+prerequisites
+kubectl – A command line tool for working with Kubernetes clusters. For more information, see Installing or updating kubectl.
+eksctl – A command line tool for working with EKS clusters that automates many individual tasks. For more information, see Installing or updating.
+AWS CLI – A command line tool for working with AWS services, including Amazon EKS. For more information, see Installing, updating, and uninstalling the AWS CLI in the AWS Command Line Interface User Guide. After installing the AWS CLI, we recommend that you also configure it. For more information, see Quick configuration with aws configure in the AWS Command Line Interface User Guide.
+
+once done we need to do configure
+
+$ Aws configure - it will ask acesss key and secret access key and region
+
+Starting EKS process:
+
+1. First you need to create EKS cluster
+eksctl create cluster --name demo-cluster --region us-east-1 --fargate
+
+we have to take care:
+pod.yml
+deploy.yml
+service.yml
+ingress.yml
+ingress controller will take care rest of it
