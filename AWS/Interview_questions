@@ -45,5 +45,6 @@ Global logic company
 44. How do you make connection to Mongo DB for containers.
 HCL
 45. What is Virtual and remote repo's in Artifactory
-46. How many and what are the languages does sonorqube supports?
+46. what are the languages does sonorqube supports?
 47. Ansible architecture and what is agent and agentless?
+48. what is secret and config and difference?
