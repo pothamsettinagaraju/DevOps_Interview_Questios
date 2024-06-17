@@ -1,0 +1,33 @@
+
+we have 7 layers
+
+application layer  L7
+presentation layer(ssl/tsl) L6
+session layer  L5
+transport layer L4
+network layer L3
+datalink layer L2
+physical layer L1 
+
+1. ALB is Application load balancer
+Layer 7
+handles http requests
+costly
+slow response
+having lot of load balancing features
+EX: amazon.com virtusa.cm
+
+2. NLB is Network loadbalancer
+layer 4
+stickey session
+handles TCP/UDP requests
+start from transport layer
+low cost
+fast response
+EX:gaming, youtbe streaming
+
+3. GWLD is gateway loadbalancer
+very high security than ALB, NLB
+to handle virtual appliances
+VPN
+firewall
