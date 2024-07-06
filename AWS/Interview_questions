@@ -47,3 +47,6 @@
 47. Ansible architecture and what is agent and agentless?
 48. what is secret and config and difference?
 49. What is Handlers in ansible?
+50. What is route and Ingress
+51. What is Docker volume.
+52. What is git merge, rebase, cherry-pick
