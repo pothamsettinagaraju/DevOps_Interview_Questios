@@ -53,3 +53,7 @@
 53. what is init container?
 54. what is daemon?
 55. what agent in CI?
+
+Routes: OpenShift-specific mechanism for exposing services with customizable URLs, load balancing, and TLS termination.
+Ingress: Kubernetes standard resource for managing external access with flexible routing rules and TLS support.
+Both Routes and Ingress serve to expose and manage access to services within a Kubernetes cluster, but Routes are specific to OpenShift while Ingress is a standard Kubernetes feature that works across different Kubernetes distributions.
