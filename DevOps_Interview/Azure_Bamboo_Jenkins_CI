@@ -33,17 +33,6 @@ Artifactory:
 3. How do you create repo in artifactory?
 4. What is Virtual and remote repo's in Artifactory
 
-------------------------------------------------------------------------------------------------------
-Ansible:
-
-1. what is Ansible?
-2. What are the ansible modules you worked on?
-3. What is ansible playbook?
-4. What is YAML?
-5. What is role and why it's important in ansible?
-6. Ansible architecture and what is agent and agentless?
-7. What is Handlers in ansible?
-
 -----------------------------------------------------------------------------------
 CodeQl and SonorQube:
 1. What is SonorQube?
