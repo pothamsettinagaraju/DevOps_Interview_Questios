@@ -1,0 +1,10 @@
+1. What is ECS?
+2. What is Lamda?
+3. What is EC2 and instance types?
+4. what VPC?
+5. What is s3 and what are the storage classes of s3?
+6. Diff EC2 and S3?
+7. What is KMS?
+8. Egreess?
+9. What if you deploy your application on EC2 instance you added load balancer and auto scaller, still your request is hung
+10. What is AWS Cloud Watch?
