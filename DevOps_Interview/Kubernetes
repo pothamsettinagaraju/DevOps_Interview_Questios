@@ -1,1 +1,15 @@
+1. What is Kubernetes Architecture?
+   
+2. What is diff Route vs Ingress vs Load balancer?
+   Routes: OpenShift-specific mechanism for exposing services with customizable URLs, load balancing, and TLS termination.
+   Ingress: Kubernetes standard resource for managing external access with flexible routing rules and TLS support.
+   Both Routes and Ingress serve to expose and manage access to services within a Kubernetes cluster, but Routes are specific to OpenShift while Ingress is a standard Kubernetes feature that works across different Kubernetes distributions.
 
+3. What are the services in Kubernetes?
+   1. Load Balancer
+   2. Cluster IP
+   3. Node port
+
+4. What is Pod Efinity and Affinity?
+5. What is diff ECS and Kubernetes?
+6. Custom Resource definitions in kubernetes?
