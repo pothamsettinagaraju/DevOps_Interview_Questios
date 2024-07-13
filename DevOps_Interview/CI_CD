@@ -1,0 +1,18 @@
+1. What is Bitbucket and GitHub does it have build pipeline?
+2. What are the Build steps?
+3. How do you integrate pipeline?
+4. What is Artifactory?
+5. which cloud support to store artifacts in cloud?
+6. How do you create repo in artifactory?
+7. what is Ansible?
+8. What are the ansible modules you worked on?
+9. What is ansible playbook?
+10. What is YAML?
+11. What is role and why it's important in ansible?
+12. What are the pipelines does Jenkins have?
+13. what is Declarative pipeline in Jenkins?
+14. What is Virtual and remote repo's in Artifactory
+15. what are the languages does sonorqube supports?
+16. Ansible architecture and what is agent and agentless?
+17. What is Handlers in ansible?
+18. What is Agent in CI?
