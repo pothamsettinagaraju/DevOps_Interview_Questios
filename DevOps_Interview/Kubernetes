@@ -1,26 +1,344 @@
+   High-Level Overview of Kubernetes Architecture:
+
+   Cluster: Composed of master nodes (control plane) and worker nodes.
+   Control Plane: Manages cluster state and scheduling.
+   Worker Nodes: Run applications in containers.
+   Pods: Deployable units containing one or more containers.
+   Services: Define how to access and load balance pods.
+   Deployments: Manage the deployment and scaling of pods.
+   Namespaces: Organize and isolate resources within a cluster.
+   ConfigMaps and Secrets: Manage configuration and sensitive data.
+   Volumes: Provide persistent storage for pods.
+   Ingress: Manage external access to services.
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
 1. What is Kubernetes Architecture?
+   Kubernetes Architecture Components:
+
+   Master Node (Control Plane):-
+   API Server: The API server is the entry point for all REST commands used to control the Kubernetes cluster. It serves the Kubernetes API and handles communication between the cluster components.
+   Controller Manager: This component runs controllers that handle routine tasks, such as ensuring that the desired state of the cluster matches the current state (e.g., creating new pods when necessary).
+   Scheduler: The scheduler assigns newly created pods to nodes based on resource availability and other constraints.
+   etcd: A distributed key-value store that holds the cluster’s state and configuration data. It’s a critical component for storing and retrieving all Kubernetes data.
+
+   Worker Nodes(Data Plane:-
+   Kubelet: An agent that runs on each worker node. It ensures that containers are running in pods as specified by the API server and manages the lifecycle of containers on the node.
+   Kube Proxy: A network proxy that maintains network rules on nodes, allowing communication to your pods from other parts of the cluster and outside of the cluster.
+   Container Runtime: The software responsible for running containers. Docker was traditionally used, but Kubernetes now supports various container runtimes like containerd and CRI-O.
+
+   Pods:
+   Pods are the smallest and simplest Kubernetes objects. A pod can contain one or more containers that share storage and networking resources. Pods represent a single instance of a running process in the cluster.
+
+   Services:
+   Services are abstractions that define a set of pods and provide a stable network endpoint to access them. They enable communication between different parts of an application and between applications and external clients.
+
+   Namespaces:
+   Namespaces provide a way to divide cluster resources between multiple users or teams. They allow for the isolation of resources within a cluster.
+
+   Deployments:
+   Deployments manage the deployment and scaling of pods. They provide declarative updates to applications, ensuring that the desired state of the application is maintained.
    
-2. What is diff Route vs Ingress vs Load balancer?
+   ReplicaSets:
+   ReplicaSets ensure that a specified number of pod replicas are running at any given time. They are used by deployments to maintain the desired number of replicas.
+
+   StatefulSets:
+   StatefulSets manage the deployment of stateful applications. They provide stable network identities and persistent storage for each pod.
+
+   ConfigMaps and Secrets:
+   ConfigMaps are used to manage configuration data that can be consumed by pods.
+   Secrets are used to manage sensitive information, such as passwords or API keys, and are accessible to pods.
+
+   Ingress:
+   Ingress manages external access to services, typically HTTP/HTTPS. It provides load balancing, SSL termination, and name-based virtual hosting.
+
+   Volumes:
+   Volumes provide persistent storage for pods, allowing data to persist even when pods are deleted or recreated.
+
+
+2. what is init container?
+   Init Containers in Kubernetes are specialized containers that run before the main containers in a Pod. They are designed to perform initialization tasks or setup work that needs to be completed before the main containers start. Init containers are particularly useful for performing tasks such as setting up configuration files, waiting for external dependencies to be available, or preparing the environment.
+
+   
+3. What is diff Route vs Ingress vs Load balancer?
    Routes: OpenShift-specific mechanism for exposing services with customizable URLs, load balancing, and TLS termination.
    Ingress: Kubernetes standard resource for managing external access with flexible routing rules and TLS support.
    Both Routes and Ingress serve to expose and manage access to services within a Kubernetes cluster, but Routes are specific to OpenShift while Ingress is a standard Kubernetes feature that works across different Kubernetes distributions.
 
-3. What are the services in Kubernetes?
-   1. Load Balancer
-   2. Cluster IP
-   3. Node port
+4. What are the services in Kubernetes?
+   ClusterIP: Exposes the Service internally within the cluster.
+   NodePort: Exposes the Service on a specific port on each Node, allowing external access.
+   LoadBalancer: Exposes the Service externally using a cloud provider’s load balancer.
+   ExternalName: Maps the Service to an external DNS name, providing external integration.
+   
 
-4. What is Pod Efinity and Affinity?
-5. What is diff ECS and Kubernetes?
+5. What is Affinity abd types?
+   Affinity:
+   Affinity rules in Kubernetes allow you to specify preferences for scheduling Pods on particular Nodes or grouping Pods together based on certain conditions. There are two main types of affinity rules:
+   1. Node Affinity
+   2. Pod Affinity
+
+   1. Node Affinity
+   Definition: Node affinity allows you to constrain which Nodes a Pod can be scheduled on based on Node labels. This is similar to nodeSelector but offers more expressive capabilities.
+   
+   Types:
+   RequiredDuringSchedulingIgnoredDuringExecution: A hard requirement that must be met for scheduling. If the rule is not met, the Pod will not be scheduled.
+   PreferredDuringSchedulingIgnoredDuringExecution: A soft preference that the scheduler will try to meet but will still schedule the Pod on other Nodes if the preference is not met.
+   
+
+   2. Pod Affinity and Anti-Affinity
+   Pod Affinity: Ensures that Pods are scheduled onto Nodes that already have certain Pods running. This can be used to co-locate Pods for performance or efficiency reasons.
+   Pod Anti-Affinity: Ensures that Pods are scheduled onto Nodes that do not have certain Pods running. This can be used to spread Pods across Nodes to enhance fault tolerance.
+   
+
 6. Custom Resource definitions in kubernetes?
-7. What are the advantages of Kubernetes?
-8. What are the disadvantages of the Kubernetes?
-9. Why Kubernetes why not Docker?
-10. What is Secret and Config and diff?
-11. What is Pod and Container?
-12. What is HPA and VPA?
-13. How do you restart container every day at 12 AM, write a syntax?
-14. How do you make connection to Mongo DB for containers?
-15. what is init container?
-> Kubernetes Commands?
+   Custom Resource (CR):
+   A Custom Resource is an instance of a Custom Resource Definition. It is a way to define and manage objects specific to your application or organization using the Kubernetes API.
+   
+   Custom Resource Definition (CRD):
+   A CRD is a Kubernetes API resource that allows you to define a new resource type. It describes the schema and behavior of the custom resource you want to manage.
 
+7. What is Secret and Config and diff?
+    ConfigMaps are used to store non-sensitive configuration data as key-value pairs. They are typically used to provide configuration data to applications in a format that is easy to consume.
+    Secrets are used to store sensitive information such as passwords, OAuth tokens, SSH keys, or any data that needs to be kept secure. Secrets are stored in a base64-encoded format, and Kubernetes provides mechanisms to handle them securely.
+
+    ConfigMaps Store: Key-value pairs in plain text.
+    Secrets store: Key-value pairs in base64-encoded format.
+
+8. What is HPA and VPA?
+    HPA: horizontal pod autoscaler, where i would be adding mutiple no.of replicas of the same deployment to the service such that it would be balacing the load and accessing it in the actual application as well.
+    VPA: Virtical Pod Autoscaler, I would be adding  more resources to the same deployment which i was running if i am using VPA rt I need to have a downtime in order to add more resources to the same deployment which i was running.
+
+9. How do you restart container every day at 12 AM, write a syntax?
+   To restart a container every day at 12 AM, you can use a Kubernetes CronJob. A CronJob allows you to run jobs on a scheduled basis, similar to cron jobs in Unix-like operating systems.
+      
+      apiVersion: batch/v1
+      kind: CronJob
+      metadata:
+        name: restart-container
+      spec:
+        schedule: "0 0 * * *"  # This means every day at 12 AM
+        jobTemplate:
+          spec:
+            template:
+              spec:
+                containers:
+                - name: restart-job
+                  image: busybox
+                  command:
+                  - /bin/sh
+                  - -c
+                  - >
+                    kubectl scale deployment my-deployment --replicas=0 &&
+                    sleep 10 &&
+                    kubectl scale deployment my-deployment --replicas=3
+                restartPolicy: OnFailure
+
+      Explanation of the YAML:
+      apiVersion: Specifies the API version for the CronJob resource.
+      kind: Specifies that this resource is a CronJob.
+      metadata: Metadata about the CronJob, including its name.
+      spec: Specifications for the CronJob.
+      schedule: Defines the cron schedule for the job in standard cron format. "0 0 * * *" means every day at midnight (12 AM).
+      jobTemplate: Defines the job template to run.
+      spec: Specifications for the job.
+      template: Defines the pod template for the job.
+      spec: Specifications for the pod.
+      containers: Defines the container that will run in the job.
+      name: The name of the container.
+      image: The image used for the container. In this example, busybox is used for simplicity.
+      command: The command that runs when the container starts. Here, it uses kubectl to scale the deployment down to zero replicas and then back up to 3 replicas.
+      restartPolicy: Policy for restarting the container if it fails. OnFailure means the container will be restarted if it fails.
+
+
+10. How do you make connection to Mongo DB for containers?
+    Connecting to a MongoDB instance from within a Kubernetes container involves several steps, including deploying MongoDB, configuring your application container to connect to MongoDB, and ensuring that networking and security settings are properly configured. Here’s a step-by-step guide on how to achieve this:
+   
+   1. Deploy MongoDB
+   First, you need to deploy MongoDB in your Kubernetes cluster. You can do this using a Kubernetes Deployment or StatefulSet, depending on whether you need MongoDB to be highly available or have specific storage requirements.
+   
+   Example Deployment for MongoDB:
+   
+   yaml
+   Copy code
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: mongodb
+   spec:
+     replicas: 1
+     selector:
+       matchLabels:
+         app: mongodb
+     template:
+       metadata:
+         labels:
+           app: mongodb
+       spec:
+         containers:
+         - name: mongodb
+           image: mongo:latest
+           ports:
+           - containerPort: 27017
+           volumeMounts:
+           - name: mongodb-data
+             mountPath: /data/db
+         volumes:
+         - name: mongodb-data
+           emptyDir: {}
+   ---
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: mongodb
+   spec:
+     selector:
+       app: mongodb
+     ports:
+       - protocol: TCP
+         port: 27017
+         targetPort: 27017
+     type: ClusterIP
+   In this YAML:
+   
+   Deployment: Defines a MongoDB pod with a single replica.
+   Service: Exposes MongoDB on port 27017 internally within the cluster.
+   2. Configure Your Application to Connect to MongoDB
+   In your application’s configuration, you need to set the connection string to point to the MongoDB service. The connection string format is usually:
+   
+   php
+   Copy code
+   mongodb://<username>:<password>@<service-name>:<port>/<database>
+   Here’s how you can configure a Kubernetes Pod to connect to MongoDB:
+   
+   Example Application Pod Configuration:
+   
+   yaml
+   Copy code
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: my-app
+   spec:
+     containers:
+     - name: my-app-container
+       image: my-app-image
+       env:
+       - name: MONGO_URI
+         value: "mongodb://mongodb:27017/mydatabase"
+   In this example:
+   
+   Environment Variable: Sets the MongoDB URI as an environment variable MONGO_URI for your application container.
+   MongoDB Service Name: mongodb refers to the MongoDB service defined in the previous step.
+   3. (Optional) Secure MongoDB Access
+   For production deployments, it's crucial to secure MongoDB access:
+   
+   Use Kubernetes Secrets: Store sensitive data like MongoDB credentials in Kubernetes Secrets.
+   Example Secret for MongoDB Credentials:
+   
+   yaml
+   Copy code
+   apiVersion: v1
+   kind: Secret
+   metadata:
+     name: mongodb-secret
+   type: Opaque
+   data:
+     mongo-user: <base64-encoded-username>
+     mongo-password: <base64-encoded-password>
+   Update the Application Pod to Use the Secret:
+   
+   yaml
+   Copy code
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: my-app
+   spec:
+     containers:
+     - name: my-app-container
+       image: my-app-image
+       env:
+       - name: MONGO_URI
+         value: "mongodb://$(MONGO_USER):$(MONGO_PASSWORD)@mongodb:27017/mydatabase"
+       envFrom:
+       - secretRef:
+           name: mongodb-secret
+   4. Access MongoDB from Outside the Cluster
+   If you need to access MongoDB from outside the Kubernetes cluster, you should expose it with a LoadBalancer or NodePort service, and ensure proper security measures (firewalls, authentication, etc.) are in place.
+
+
+
+> Kubernetes Commands?
+   Kubernetes commands:
+   kubectl get pods
+   kubectl logs <pod-name>
+   kubectl exec -it <pod-name> -- <command>
+   kubectl delete pod <pod-name>
+   
+   kubectl get deployments - list all deployments
+   kubectl describe deployment <deployment-name> - describe deployment
+   kubectl apply -f <deployment-file.yaml> - apply deployment
+   kubectl set image deployment/<deployment-name> <container-name>=<image-name>:<tag> - update deployment 
+   kubectl delete deployment <deployment-name> - delete deployment
+   
+   kubectl get services - list all services
+   kubectl describe service <service-name>
+   kubectl apply -f <service-file.yaml>
+   kubectl delete service <service-name>
+   
+   
+   kubectl get namespaces
+   kubectl create namespace <namespace-name>
+   kubectl delete namespace <namespace-name>
+   
+   kubectl get configmaps
+   kubectl describe configmap <configmap-name>
+   kubectl create configmap <configmap-name> --from-literal=<key>=<value>
+   kubectl delete configmap <configmap-name>
+   
+   kubectl get secrets
+   kubectl describe secret <secret-name>
+   kubectl describe secret <secret-name>
+   kubectl create secret generic <secret-name> --from-literal=<key>=<value>
+   kubectl delete secret <secret-name>
+   
+   kubectl get pv - list persistent volumes
+   
+   kubectl get jobs - list jobs
+   kubectl delete job <job-name>
+   
+   kubectl get cronjobs - list all jobs
+   kubectl describe cronjob <cronjob-name>
+   
+   kubectl run <pod-name> --image=<image-name> --command -- <command>- run temparory pod
+   
+   Advanced Commands
+   Run a Temporary Pod:
+   kubectl run <pod-name> --image=<image-name> --command -- <command>
+   
+   Port Forwarding:
+   kubectl port-forward <pod-name> <local-port>:<pod-port>
+   
+   Apply Label to Resource:
+   Kubectl label <resource-type> <resource-name> <key>=<value>
+   
+   Remove Label from Resource:
+   kubectl label <resource-type> <resource-name> <key>-
+   
+   Get Resource in YAML or JSON:
+   kubectl get <resource-type> <resource-name> -o yaml
+   kubectl get <resource-type> <resource-name> -o json
+   
+   Debugging and Monitoring:
+   Check Pod Events:
+   kubectl describe pod <pod-name>
+   
+   View Pod Metrics:
+   kubectl top pod <pod-name>
+   
+   View Node Metrics:
+   kubectl top node <node-name>
