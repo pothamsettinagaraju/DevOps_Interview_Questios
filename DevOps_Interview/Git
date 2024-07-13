@@ -1,7 +1,13 @@
 1. What is Git?
+   Git is a distributed version control system widely used for tracking changes in source code during software development. It allows multiple developers to collaborate on the same project, manage code changes, and maintain a history of modifications.
+
 2. Tell me some Git commands you worked on?
-3. What is Git rebase and Git revert and Git reset?
-4. What is Cherrypic?
-5. what is git fetch and pull?
-6. What is git stack?
-7. What is git merge, rebase, cherry-pick
+   git merge -> used to integrate changes from one branch into another.
+   git pull - fetch + merge -> pull changes from remote repo and merge to current branch
+   git fetch -> fetches updates such as new branches, tags, and commits, but does not integrate these changes into your current branch or working directory.
+   git revert -> is a command used in Git to create a new commit that undoes the changes made by a previous commit. This is useful when you want to undo changes introduced by a specific commit without altering the commit history or affecting other commits.
+   git reset -> undo changes and manipulate the state of your repository. It can modify the commit history and affect your working directory and staging area.
+   git rebase -> used to integrate changes from one branch into another by moving or combining a series of commits. It’s commonly used to maintain a clean commit history and streamline the integration process.
+   git cherry-pic -> used to apply a specific commit from one branch to another. This can be useful when you want to apply individual commits from one branch to another without merging the entire branch.
+   git stash -> used to temporarily save changes that are not yet committed. It allows you to clean your working directory without losing your uncommitted changes, so you can switch to another branch or perform other tasks without committing incomplete work.
+
