@@ -1,16 +1,36 @@
 1. What is Docker and Docker deamon? 
-2. What is docker file?
-3. What is Docker compose?
-4. What is Docker swarm?
-5. What are the build and run time commands?
-6. What is Docker volume and Volume mount?
-7. What is diff CMD and Entrypoint?
-8. What is diff COPY and ADD?
-9. What is Export in docker?
-10. What are the advantages of docker?
-11. What are the disadvantages of docker?
+   Docker is a tool and platform that uses container technology to create, deploy, and run applications.
+   Containers: Containers are lightweight, portable, and self-sufficient units that package up an application and all its dependencies, including the runtime, libraries, and system tools.
+   Images: Docker images are the read-only templates used to create containers. An image includes everything needed to run an application—code, runtime, libraries, and environment variables. Images can be shared via Docker Hub or other container registries.
+   Docker Engine: The Docker Engine is the runtime that runs and manages containers. It includes both the client and server components:
+    a. Docker Daemon: The background service that manages Docker containers.
+    b. Docker CLI: The command-line interface used to interact with the Docker Daemon
+   Dockerfile: A Dockerfile is a script with a set of instructions on how to build a Docker image. It includes commands to install software, set up configurations, and add files into the image.
+   Docker Compose: A tool for defining and running multi-container Docker applications using a YAML file (docker-compose.yml). It simplifies the process of managing multi-container setups by allowing you to define services, networks, and volumes in a single file.
+   Docker Hub: A cloud-based registry service where Docker images can be stored and shared. It provides a public repository for community-contributed images and a private repository for organizations.
 
-12. Docker Commands?
+   Docker Daemon (or Docker Engine) is the background service responsible for managing Docker containers, images, networks, and volumes on a host system. 
+   It performs several key functions:
+    1. Container Management: The Docker Daemon creates, starts, stops, and deletes containers. It ensures that containers are running as expected and manages their lifecycle.
+    2. Image Management: It handles the pulling and pushing of Docker images to and from registries (like Docker Hub). The daemon ensures that the appropriate images are available on the host for creating and running containers.
+    3. Networking: The Docker Daemon manages networking for containers, including setting up network interfaces and handling communication between containers.
+    4. Volume Management: It manages Docker volumes, which are used to persist data generated and used by Docker containers.
+    5. API: The Docker Daemon provides a REST API that can be used by other applications to interact with Docker. The Docker CLI communicates with the Docker Daemon through this API.
+
+   How Docker and Docker Daemon Work Together?
+   Client-Server Model: Docker follows a client-server architecture. 
+   The Docker CLI (client) sends commands to the Docker Daemon (server). The daemon processes these commands and manages containers accordingly.
+
+2. What is Docker swarm?
+3. What are the build and run time commands?
+4. What is Docker volume and Volume mount?
+5. What is diff CMD and Entrypoint?
+6. What is diff COPY and ADD?
+7. What is Export in docker?
+8. What are the advantages of docker?
+9. What are the disadvantages of docker?
+
+10. Docker Commands?
 docker ps
 list all the running containers
 
