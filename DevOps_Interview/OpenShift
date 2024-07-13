@@ -1,5 +1,8 @@
 1. What is OC?
+   OpenShift is a Kubernetes-based container orchestration platform developed by Red Hat. It is designed to simplify the development, deployment, and management of containerized applications. OpenShift provides a comprehensive platform for managing containerized applications across various environments, including on-premises, public cloud, and hybrid cloud
+
 2. Diff Kubernetes and OpenShift?
+   
 3. What are the advantages of OC4?
 4. What are the disadvantages of OC4?
 5. OC4 commands?
