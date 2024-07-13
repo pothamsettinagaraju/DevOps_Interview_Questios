@@ -1,4 +1,28 @@
 1. What is DevOps?
+   collaboration between software development (Dev) and IT operations (Ops) teams. The goal is to streamline and enhance the software delivery process by integrating development and operations efforts throughout the entire lifecycle of applications.
+
 2. Why DevOps?
+   Faster Time to Market
+   Improved Quality
+   Increased Efficiency
+   Enhanced Collaboration
+   Greater Agility and Flexibility
+   Enhanced Security
+   Continuous Improvement
+   Better Resource Management
+
 3. What is Monolithic and Microservice application?
-4. What is 2,3,4,5 tire Architecture?
+  In monolithic architecture rt the entire application is entirely designed as a tightly coupled unit, and for suppose lets' say
+  even if you want to make any modifications to a particular service rt, you should be deploying the entire application, and even 
+  if you want to scale any of these services you should be deploying, you should be scalling the entire application as it's whole
+
+  In the form of microservices rt we would be able to segregate this particular monolithic application into multiple individual
+  microservices which are responsible for handling their own application code
+  In the microservices rt we would be able to manage the scalling of the services efficiently why because we would be able to upscale
+  or downscale a single service upon the usage of that particular service, and we will be using a Docker in order to containerize
+  these mircroservices.
+
+4. What is 3 tire Architecture?
+   2 tire architecture :- follows client-server architecture : Client Layer -> Server Layer
+   3 tire architectire :- Presentation Tier -> Application Tier (Business Logic Tier) -> Data Tier
+   4 tire architecture :- UI -> backend(logic) -> Database -> Network
