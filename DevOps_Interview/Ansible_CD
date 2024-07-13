@@ -134,6 +134,7 @@
    which is a human-readable data serialization format. YAML’s simplicity makes it easy to write and understand playbooks.
 
 5. What is role and why it's important in ansible?
+   role is a structured way to organize and reuse sets of tasks, variables, files, and templates that are used to perform a specific function or configure a particular application or service. Roles help in modularizing and organizing Ansible playbooks, making them more manageable, reusable, and scalable.
 
 6. What is Handlers in ansible?
    Handlers are special tasks in Ansible that are executed conditionally based on notifications from other tasks.
