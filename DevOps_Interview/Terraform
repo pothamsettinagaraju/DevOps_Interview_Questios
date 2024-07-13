@@ -17,10 +17,9 @@
   -> terraform apply - In order to create what ever the resources that we have planned
   -> terraform import - In order to import the resources
   -> terraform destroy - In order to destroy the resources that have been created or in the state file
+  -> fmt - In order to format the terraform files
+  -> terraform validate - in order to validate my terraform files
 
 5.What is Statefile and how does you secure and write syntax for statefile versioning for aws s3?
   state file (often called 'terraform.tfstate') is a critical component that keeps track of the current state of your infrastructure.
-
-  -> fmt - In order to format the terraform files
-  -> terraform validate - in order to validate my terraform files
 
