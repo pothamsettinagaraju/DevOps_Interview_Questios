@@ -18,5 +18,9 @@
 9. Why Kubernetes why not Docker?
 10. What is Secret and Config and diff?
 11. What is Pod and Container?
+12. What is HPA and VPA?
+13. How do you restart container every day at 12 AM, write a syntax?
+14. How do you make connection to Mongo DB for containers?
+15. what is init container?
 > Kubernetes Commands?
 
