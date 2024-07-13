@@ -9,5 +9,34 @@
 9. What is Export in docker?
 10. What are the advantages of docker?
 11. What are the disadvantages of docker?
-12. Docker Commands?
 
+12. Docker Commands?
+docker ps
+list all the running containers
+
+docker ps -a
+list all the running/stopped containers
+
+docker ps -f status=running
+To list only running containers
+
+docker ps -f status=exited
+To list only stopped containers
+
+docker ps -f status=created
+To list containers that have been created but not started
+
+docker inspect <container_id_or_name>
+To get detailed information about a specific container, including its status, IP address, configuration, and more
+
+docker logs <container_id_or_name>
+To view the logs of a running container
+
+docker logs -f <container_id_or_name>
+Add the -f flag to follow the logs in real-time
+
+docker top <container_id_or_name>
+To list processes running inside a container
+
+docker build -t "tag_name"
+To build a docker image
