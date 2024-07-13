@@ -1,1 +1,10 @@
-
+1. What is Docker and Docker deamon? 
+2. What is docker file?
+3. What is Docker compose?
+4. What is Docker swarm?
+5. What are the build and run time commands?
+6. What is Docker volume and Volume mount?
+7. What is diff CMD and Entrypoint?
+8. What is diff COPY and ADD?
+9. What is Export in docker?
+10. What are the disadvantages of docker?
