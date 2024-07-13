@@ -1,18 +1,50 @@
-1. What is Bitbucket and GitHub does it have build pipeline?
-2. What are the Build steps?
-3. How do you integrate pipeline?
-4. What is Artifactory?
-5. which cloud support to store artifacts in cloud?
-6. How do you create repo in artifactory?
-7. what is Ansible?
-8. What are the ansible modules you worked on?
-9. What is ansible playbook?
-10. What is YAML?
-11. What is role and why it's important in ansible?
-12. What are the pipelines does Jenkins have?
-13. what is Declarative pipeline in Jenkins?
-14. What is Virtual and remote repo's in Artifactory
-15. what are the languages does sonorqube supports?
-16. Ansible architecture and what is agent and agentless?
-17. What is Handlers in ansible?
-18. What is Agent in CI?
+Bitbucket and GitHub:
+1. What is Bitbucket and GitHub, does it have build pipeline?
+Bitbucket:
+Owned by: Atlassian.
+Primary Use: Hosting Git and Mercurial repositories.
+Key Features:
+Pull Requests: For code review and collaboration.
+Branch Permissions: Control who can push to or merge into branches.
+Issue Tracking: Integrated with Jira for issue tracking and project management.
+Wiki: For project documentation.
+
+GitHub:
+Owned by: Microsoft.
+Primary Use: Hosting Git repositories.
+Key Features:
+Pull Requests: For code review and collaboration.
+Actions: GitHub Actions provides automation for CI/CD workflows.
+Issues: Integrated issue tracking system.
+Wiki: For project documentation.
+Projects: For managing tasks and workflows.
+
+--------------------------------------------------------------------------------------
+Bamboo and Jenkins and Azure pipeline:
+1. What is Jenkins?
+2. What are the pipelines does Jenkins have?
+3. what is Declarative pipeline in Jenkins?
+4. How do you integrate pipeline?
+5. What is Agent in CI?
+-------------------------------------------------------------------------------
+Artifactory:
+1. What is Artifactory?
+2. which cloud support to store artifacts in cloud?
+3. How do you create repo in artifactory?
+4. What is Virtual and remote repo's in Artifactory
+
+------------------------------------------------------------------------------------------------------
+Ansible:
+
+1. what is Ansible?
+2. What are the ansible modules you worked on?
+3. What is ansible playbook?
+4. What is YAML?
+5. What is role and why it's important in ansible?
+6. Ansible architecture and what is agent and agentless?
+7. What is Handlers in ansible?
+
+-----------------------------------------------------------------------------------
+CodeQl and SonorQube:
+1. What is SonorQube?
+2. what are the languages does sonorqube supports?
