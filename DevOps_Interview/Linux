@@ -1,0 +1,48 @@
+1. What is Linux and which version you are using?
+   Linux is an open-source operating system kernel that acts as the core of various operating systems. It manages hardware resources and provides a platform for running software.
+   Linux is the kernel and core technology.
+   Red Hat Linux is a specific, enterprise-focused version of Linux with additional tools, support, and services provided by Red Hat.
+
+2. What are the commands you worked on Linux?
+   Multible commands which i would be using in day-to-day activities
+   1. netstat -lntp  ->  in order to list the listening ports
+   2. du -sh *  -> in order to check the usage
+   3. lsblk  -> in order to list all the bloked devices
+   4. ping address -> in order to test the connectivity ex: ping google.com
+   5. telnet adress port  -> in order to check the connectivity of a particular service in anther IP address
+       is used to test connectivity to a specific port on a host EX: telnet google.com 90
+   6. htop -> providing a real-time, colorful, and detailed display of system processes and resource usage.
+   7. ps -ef  -> in order to list all running  processers and i would be using | symbal in order to such particular process aswell
+
+3. How do you check linux version?
+   uname -r  -> This will display the kernel version. For more detailed kernel information.
+   uname -a -> This provides additional information including the kernel version, hostname, and architecture.
+
+   RedHat:
+   cat /etc/redhat-release
+
+   CentOS:
+   cat /etc/centos-release
+
+   Ubuntu or Debian:
+   lsb_release -a or cat /etc/os-release
+
+4. netstat -lntp?
+   The command netstat -lntp is used to display detailed information about network connections on a Linux system. Here’s a breakdown of what each option in the command means:
+
+Command Breakdown
+-l: This flag stands for "listening". It limits the output to only those sockets that are currently in the listening state. This is useful for identifying which services are waiting for incoming connections.
+
+-n: This flag tells netstat to "show numerical addresses". It prevents the command from resolving hostnames and port names to their symbolic names, thus providing raw IP addresses and port numbers instead of their domain names or service names.
+
+-t: This flag stands for "TCP". It restricts the output to TCP connections. TCP is a connection-oriented protocol used for reliable communication over networks.
+
+-p: This flag shows the "process ID and program name" associated with each socket. It is useful for identifying which processes are using specific network ports.
+
+Usage and Example
+When you run netstat -lntp, you get output that lists all TCP ports that are currently in the listening state, along with their numerical IP addresses and port numbers, and the process ID (PID) and name of the program that is using each port.
+
+
+
+
+
