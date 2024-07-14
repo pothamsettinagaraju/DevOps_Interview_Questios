@@ -22,18 +22,130 @@ Projects: For managing tasks and workflows.
 --------------------------------------------------------------------------------------
 Bamboo and Jenkins and Azure pipeline:
 1. What is Jenkins?
+  Jenkins is a CICD tool by using which i would be able to manage the entire continuous Integration and contionus deployment
+  from the creation of a Pull request to the deployment, continuously delivering our newly created images to the DEV or QA ENVTS.
+  and we would be using multiple plugins in order to achieve this like: GIT plugin, Maven plugin, Sonor plugin in order to do
+  sonor scans and we would be using kubenetes plugin
+
 2. What are the pipelines does Jenkins have?
+  1. Declarative pipelines
+  2. Scripted piplines
+  3. Hybrid pipelines which is a mixture of 1,2 pipelines
+
 3. what is Declarative pipeline in Jenkins?
+  The declarative pipeline following a particular syntax where these pipelines would be starting of with pipeline inside
+  which i would be having a stages inside which i would be having stage and inside the stage i would be having the steps
+  I would be having multiple stage in side the stages such that i would be able to configure these and i would be able to
+  write the parallel as well in order to parallel execute multiple stages at a single time
+
 4. How do you integrate pipeline?
-5. What is Agent in CI?
+  EX: bitbucket and Bamboo as CI/CD tools
+  1. Create a Bitbucket Repository: If you haven’t already, create a repository in Bitbucket where your source code will be hosted.
+  2. Create a Bamboo Plan: In Bamboo, create a new plan that will define the build and deployment process.
+  3. Connect Bitbucket to Bamboo: 
+      1. Link Bitbucket with Bamboo:
+      Configure Application Links (Optional):
+      If you want to integrate Bamboo with Bitbucket for additional features like automatic updates, go to Bamboo > Administration > Application Links and set up a link between Bitbucket and Bamboo.
+      
+      2. Set Up Repository in Bamboo:
+      Go to the Bamboo plan configuration page.
+      Under the Repositories section, click on Add repository and select Bitbucket.
+      Authenticate with Bitbucket by providing your Bitbucket username and password or using OAuth credentials.
+      
+      3. Configure Bitbucket Repository in Bamboo:
+      Repository Settings:
+      Choose the repository type (e.g., Bitbucket Cloud or Bitbucket Server) and provide the repository URL.
+      Enter your Bitbucket credentials if required.
+      Configure repository settings, such as branch, authentication, and any repository-specific configurations.
+      
+      4. Set Up Build Triggers:
+      Create a Build Trigger:
+      In Bamboo, configure the plan to trigger builds automatically on code changes.
+      Go to Plan Configuration > Triggers.
+      Add a new trigger of type Bitbucket (or Repository Polling if you are not using the Bitbucket integration).
+      Configure the trigger to start the build process when there are changes to the Bitbucket repository.
+
+  4. Configure Build and Deployment: Define the build tasks in Bamboo’s build stage, such as compiling code, running tests, and generating build artifacts.
+
+5. What is CI Agents?
+  Types of CI Agents:
+  Hosted Agents: Provided and managed by the CI/CD service provider. For example, AWS CodeBuild or GitHub Actions offer managed agents that you can use without setting up your own infrastructure.
+  Self-Hosted Agents: You set up and manage these agents on your own servers or infrastructure. They offer more control and can be customized according to your specific needs.
+
+  Jekins:
+  Master-Slave Architecture: Jenkins uses a master-slave (or controller-agent) architecture where the master manages the build queue and agents (slaves) perform the build tasks.
+  Agent Types: You can use both Jenkins-provided agents or set up your own agents on different machines or containers.
+
+  GitHub Actions:
+  GitHub-Hosted Runners: GitHub provides hosted runners for various operating systems (Linux, Windows, macOS) to execute workflows.
+  Self-Hosted Runners: You can also set up self-hosted runners to run workflows on your own infrastructure.
+
+  Agent Pools in Azure Pipelines:
+  Default Pool: Each Azure DevOps organization has a default pool of Microsoft-hosted agents.
+  Custom Pools: You can create custom pools for self-hosted agents to better manage workload distribution and environment requirements.
+
+  Bamboo:
+    1. Remote Agents: 
+    Description: These are agents installed on separate machines (physical or virtual) from the Bamboo server.
+    Purpose: They help distribute the workload and enable parallel processing of multiple builds and deployments.
+    Configuration: You set up remote agents on different machines or environments where the build and deployment tasks are executed.
+
+    2. Local Agents:
+    Description: These are built into the Bamboo server itself, often used for smaller or less complex setups.
+    Usage: Suitable for environments where the workload is manageable and doesn't require separate agents
+
 -------------------------------------------------------------------------------
 Artifactory:
 1. What is Artifactory?
+   JFrog Artifactory is a universal artifact repository manager that enables organizations to store, manage, and distribute software artifacts and dependencies throughout the software development lifecycle. It supports a wide range of package formats and integrates with various CI/CD tools and build systems.
+
 2. which cloud support to store artifacts in cloud?
+   yes, all most all cloud support like AWS,Azure,GCP
+
 3. How do you create repo in artifactory?
-4. What is Virtual and remote repo's in Artifactory
+    Goto artofactory -> profile -> create repo -> provide which type of repo you want to create like (gradle, maven) -> specify repo folder like local, remote, virtual -> create
+
+4. What is Virtual, remote and local repo's in Artifactory
+    Remote Repositories: Proxy and cache artifacts from external sources, improving performance and reliability.
+    Virtual Repositories: Aggregate multiple local and remote repositories into a single logical repository, simplifying access and management.
+    Local Repositories: Store and manage artifacts generated internally
 
 -----------------------------------------------------------------------------------
 CodeQl and SonorQube:
 1. What is SonorQube?
+    SonarQube is an open-source platform used for continuous inspection of code quality. It performs static code analysis to identify bugs, code smells, vulnerabilities, and other issues in your codebase. By integrating with your development pipeline, SonarQube helps ensure that code quality standards are maintained throughout the software development lifecycle.
+
 2. what are the languages does sonorqube supports?
+    Built-in Language Support
+    SonarQube includes native support for several programming languages. As of the latest updates, the built-in languages include:
+    
+    Java
+    C#
+    JavaScript
+    TypeScript
+    Python
+    C/C++
+    Objective-C
+    Swift
+    Kotlin
+    PHP
+    Ruby
+    Go
+    HTML
+    CSS
+
+    Language Support via Plugins:
+    SonarQube extends its support to other languages through plugins. Here are some additional languages supported via plugins:
+    
+    Scala
+    Groovy
+    R
+    Dart
+    SQL
+    PL/SQL
+    TSQL
+    VB.NET
+    Assembly
+    Fortran
+    COBOL
+    Perl
