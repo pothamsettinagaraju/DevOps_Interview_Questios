@@ -1,10 +1,110 @@
 1. What is ECS?
+   Amazon Elastic Container Service (ECS) is a robust container orchestration service that facilitates the deployment, management, and scaling of containerized applications on AWS. With support for both EC2 and Fargate launch types. 
 2. What is Lamda?
-3. What is EC2 and instance types?
-4. what VPC?
-5. What is s3 and what are the storage classes of s3?
-6. Diff EC2 and S3?
-7. What is KMS?
-8. Egreess?
-9. What if you deploy your application on EC2 instance you added load balancer and auto scaller, still your request is hung
+   AWS Lambda is a powerful serverless computing service that allows you to run code in response to events without managing infrastructure. It supports multiple programming languages and integrates with a broad range of AWS services. By focusing on code and not on server management, Lambda enables developers to build scalable, cost-effective applications with ease.
+3. CDK vs CFN?
+   Cloud Formation: might be preferable if you prefer working directly with declarative templates or have existing CloudFormation templates and infrastructure.
+   CDK(Cloud Development Kit) : is advantageous if you prefer using programming languages, need complex infrastructure setups, or want to leverage the rich set of constructs and abstraction layers offered by CDK.
+   Both tools are compatible and can be used in conjunction. For instance, you might use CDK to define complex infrastructure and CloudFormation for simpler, static setups.
+
+4. How to integrate AWS ECS and Lambda?
+   if you want to integrate ECS with lamda, first
+   1. first you need to create ECS and define task definitions in ECS.
+   2. seccond you need to create AWS Lambda which invoke the AWS ECS service using programming language
+   3. Lambda fuction inoke the AWS ECS task or service based on your scope.
+   4. AWS Lambda would trigger by AWS CloudWatch events or S3 or SNS.
+
+4. What is EC2 and instance types?
+    EC2 Instances Purchasing Options:
+    * On-Demand Instances — short workload, predictable pricing, pay by second
+    * Reserved (| & 3 years)
+    
+    * Reserved Instances — long workloads
+    + Convertible Reserved Instances — long workloads with flexible instances
+    
+    * Savings Plans (I & 3 years) —commitment to an amount of usage, long workload
+    * Spot Instances — short workloads, cheap, can lose instances (less reliable)
+    
+    * Dedicated Hosts — book an entire physical server, control instance placement
+    
+    * Dedicated Instances — no other customers will share your hardware
+    
+    « Capacity Reservations — reserve capacity in a specific AZ for any duration
+
+5. what VPC?
+   A VPC is a Virtual Private Cloud by using which we would able to isolate our resources over a public cloud environment
+   and by using this VPC I would be able to configure the CADR range for our particular VPC and i would be able to confiure
+   the no.of subnets that i need to have and i would be able to confiure these according to the suites for our organization
+
+6. What is Public Private Subnet and what are the differences between those two?
+  By using a public subnet I would be able to host the resources which would be able to directly accessible from the public
+  internet.
+  By using Private subnet I would be able to host the instances which doesn't need to be accessed by the public internet directly
+  and these would be typically the back end application server code or else the databases and the private subnet instances
+  whould be able to downloads packages from the public internet directly by using NAT Gateway(route table) or SNAT Gateway(Load balancer)
+
+7. What is s3 and what are the storage classes of s3?
+    S3 Standard: 
+    Use Case: Frequently accessed data.
+    Features: High durability, availability, and performance.
+    Ideal For: Websites, content distribution, and big data analytics.
+
+    S3 Intelligent-Tiering:    
+    Use Case: Data with unpredictable access patterns.
+    Features: Automatically moves data between two access tiers (frequent and infrequent) based on changing access patterns.
+    Ideal For: Data with unknown or changing access patterns.
+
+    S3 Standard-IA (Infrequent Access):    
+    Use Case: Data that is less frequently accessed but requires rapid access when needed.
+    Features: Lower cost than S3 Standard, with a retrieval fee.
+    Ideal For: Long-term storage, backups, and disaster recovery.
+
+    S3 One Zone-IA:    
+    Use Case: Infrequently accessed data that does not require multiple availability zone resilience.
+    Features: Lower cost than S3 Standard-IA, stored in a single availability zone.
+    Ideal For: Non-critical data or data that can be recreated.
+
+    S3 Glacier:    
+    Use Case: Long-term archival data with retrieval times ranging from minutes to hours.
+    Features: Low cost for archival storage, retrieval fees based on access speed.
+    Ideal For: Archival of data that is rarely accessed.
+
+    S3 Glacier Deep Archive:    
+    Use Case: Lowest-cost storage for data that is rarely accessed, with retrieval times of 12 hours or more.
+    Features: Lowest storage cost, higher retrieval costs compared to S3 Glacier.
+    Ideal For: Long-term archival of rarely accessed data.
+
+    S3 Outposts:    
+    Use Case: Data storage on-premises with AWS Outposts for use cases requiring local data processing.
+    Features: Local data storage integrated with S3 on AWS Outposts hardware.
+    Ideal For: Local workloads and data residency requirements.
+
+8. Diff EC2 and S3?
+   S3: Simple storage service, Scalable and store data.
+   Purpose: bject storage service designed to store and retrieve large amounts of unstructured data, such as documents, images, videos, and backups.
+
+   EC2: Elastic Cloud Computing - it's virtual instance we can run our applications on EC2 instances.
+   Purpose: Compute service that provides resizable virtual servers (instances) for running applications and workloads.
+
+9. What is KMS?
+   Key Management Service:
+   Encryption: KMS can be used to encrypt data at rest in S3 buckets. You can specify KMS keys for server-side encryption (SSE-KMS) to protect the data stored in S3.
+   By Using KMS can Encrypt: S3, EBS(Elastic Block store volumes), RDS (Relational Database Service), Amazon Redshift, DynamoDB, etc.
+
+10. What is Amazon Redshift.
+   Amazon Redshift is a powerful and scalable data warehousing service designed for large-scale data analysis and business intelligence. Its features, such as columnar storage, MPP architecture, and integration with the AWS ecosystem, make it a robust solution for handling large datasets and performing complex queries efficiently.
+
+
+11. Egreess?
+    Ingress refers to the incoming traffic or data entering your AWS resources from external sources, such as a user accessing a web application hosted on an EC2 instance.   
+    Egress refers to the outgoing traffic or data leaving your AWS resources to external destinations, such as an EC2 instance sending data to the internet or another AWS service.
+
+9. What if you deploy your application on EC2 instance you added load balancer and auto scaller, still your request is hung.
+   Application Issues
+   Infrastructure Misconfigurations
+   Network Problems
+   Instance Performance Issues
+   Database or External Dependencies
+   etc
 10. What is AWS Cloud Watch?
+    CloudWatch is a monitoring and observability service provided by Amazon Web Services (AWS) that enables you to collect, analyze, and act on metrics and log data from your AWS resources and applications.
