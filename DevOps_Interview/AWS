@@ -95,7 +95,7 @@
    Amazon Redshift is a powerful and scalable data warehousing service designed for large-scale data analysis and business intelligence. Its features, such as columnar storage, MPP architecture, and integration with the AWS ecosystem, make it a robust solution for handling large datasets and performing complex queries efficiently.
 
 
-11. Egreess?
+11. Ingress vs Egress?
     Ingress refers to the incoming traffic or data entering your AWS resources from external sources, such as a user accessing a web application hosted on an EC2 instance.   
     Egress refers to the outgoing traffic or data leaving your AWS resources to external destinations, such as an EC2 instance sending data to the internet or another AWS service.
 
