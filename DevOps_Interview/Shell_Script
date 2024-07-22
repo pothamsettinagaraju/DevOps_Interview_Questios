@@ -99,3 +99,32 @@ top
 kill
 
 Description: Sends a signal to a process, typically to terminate it.
+------------------------------------------------------------------------------------------------------------
+Shell script examples:
+
+1. How to delete logs older than 90 days
+  find <search directory> -type f -mtime +x -delete
+  find /apps/cipg/var/logs -type f -mtime +90 -delete
+  Explanation: 
+  find: The first option for the find command is the path to the search directory, if no path is passed it works on the present working directory.
+  -type: The next component is the -type option. This option specifies what kind of object we are searching for. For example, f is used for all general file types such as text files, scripts, etc. The d type searches for directories only. Here we are looking for files only so, we use the f option with -type.
+  mtime: The last component is the –mtime component which takes input the number of days, the searched object was last modified. In this case, we looking for files older than x days so, we passed +x, where the + suffix indicates that the time could be x or more but, not less.
+  -delete: by using the inbuilt -delete option. This option deletes the files found by the find command. This is the most effective way to use the find command for deleting files as it uses a single command rather than multiple commands.
+
+2. Cron job:
+  * * * * * /path/to/command
+  description: Here, the * in all fields means the command will run every minute of every hour of every day of every month and every day of the week. This effectively makes it run every minute.
+  Exp:
+  1. Minute (0-59): The * in the minute field means the task will run every minute of the specified hour(s).
+  2. Hour (0-23): The * in the hour field means the task will run every hour of the specified day(s).
+  3. Day of the Month (1-31): The * in the day of the month field means the task will run every day of the specified month(s).
+  4. Month (1-12): The * in the month field means the task will run every month of the specified day(s).
+  5. Day of the Week (0-7): The * in the day of the week field means the task will run every day of the week.
+    0 or 7: Sunday
+    1: Monday
+    2: Tuesday
+    3: Wednesday
+    4: Thursday
+    5: Friday
+    6: Saturday
+
