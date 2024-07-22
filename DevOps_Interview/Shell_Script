@@ -127,4 +127,6 @@ Shell script examples:
     4: Thursday
     5: Friday
     6: Saturday
+give me cronjob which run 7 pm from monday to friday
+0 19 * * 1-5 /path/to/command
 
