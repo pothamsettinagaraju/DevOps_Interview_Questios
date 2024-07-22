@@ -1,0 +1,101 @@
+echo
+
+Description: Prints text or variables to the console.
+Example:
+sh
+Copy code
+echo "Hello, World!"
+ls
+
+Description: Lists directory contents.
+Example:
+sh
+Copy code
+ls -l
+cd
+
+Description: Changes the current directory.
+Example:
+sh
+Copy code
+cd /var/log
+cp
+
+Description: Copies files or directories.
+Example:
+sh
+Copy code
+cp file1.txt backup/
+mv
+
+Description: Moves or renames files or directories.
+Example:
+sh
+Copy code
+mv file1.txt /tmp/
+rm
+
+Description: Removes files or directories.
+Example:
+sh
+Copy code
+rm file1.txt
+mkdir
+
+Description: Creates a new directory.
+Example:
+sh
+Copy code
+mkdir new_directory
+find
+
+Description: Searches for files and directories.
+Example:
+sh
+Copy code
+find /var/log -name "*.log"
+grep
+
+Description: Searches for a pattern in files.
+Example:
+sh
+Copy code
+grep "error" /var/log/syslog
+chmod
+
+Description: Changes file permissions.
+Example:
+sh
+Copy code
+chmod 755 script.sh
+curl
+
+Description: Transfers data from or to a server using various protocols.
+Example:
+sh
+Copy code
+curl -O https://example.com/file.txt
+wget
+
+Description: Downloads files from the web.
+Example:
+sh
+Copy code
+wget https://example.com/file.txt
+ps
+
+Description: Displays information about active processes.
+Example:
+sh
+Copy code
+ps aux | grep httpd
+top
+
+Description: Provides a dynamic view of system processes.
+Example:
+sh
+Copy code
+top
+kill
+
+Description: Sends a signal to a process, typically to terminate it.
