@@ -53,6 +53,15 @@
 53. what is init container?
 54. what is daemon?
 55. what agent in CI?
+56. can we run program without a build tool?
+57. What is EC2 instance types?
+58. what are the categories in AWS?
+59. what is s3 types?
+60. What is t2.micro type defalut storage and CPU?
+61. How to get emp 4th highest salary name?
+62. what is code quality?
+63. 
+
 
 Routes: OpenShift-specific mechanism for exposing services with customizable URLs, load balancing, and TLS termination.
 Ingress: Kubernetes standard resource for managing external access with flexible routing rules and TLS support.
